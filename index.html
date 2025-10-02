@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charte de Classe Interactive</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-left: 6px solid #1a73e8;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 320px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+
+  .rule-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1a73e8;
+  }
+
+  .rule-desc {
+    font-size: 1em;
+    color: #333;
+  }
+
+  .consequence {
+    display: none;
+    margin-top: 12px;
+    padding: 10px;
+    background: #ffe0e0;
+    color: #d32f2f;
+    font-weight: bold;
+    border-radius: 5px;
+    border-left: 4px solid #d32f2f;
+  }
+
+  /* Texte flottant stylé */
+  .by-dev {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: #888;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .by-dev:hover {
+    color: #1a73e8;
+    text-shadow: 0 0 10px #1a73e8, 0 0 20px #1a73e8, 0 0 30px #1a73e8;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<h1>Charte de Classe</h1>
+
+<div class="container">
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">✅ L'HONNETETE</div>
+    <div class="rule-desc">Agir toujours avec honnêteté.</div>
+    <div class="consequence">En cas de manquement, l’élève perd son tour lors d’une activité (jeu, débat, quiz) et devra attendre le suivant pour participer.</div>
+  </div>
+
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">🛠 LA RESPONSABILITE</div>
+    <div class="rule-desc">Prendre en charge de petites responsabilités pour le bon déroulement des activités.</div>
+    <div class="consequence">Prendre en charge de petites responsabilités pour assurer l’organisation et le bon déroulement des activités de la classe, comme effacer le tableau, aligner les chaises, distribuer les documents, ranger le matériel ou gérer le temps.</div>
+  </div>
+
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">🤝 LA SOLIDARITE</div>
+    <div class="rule-desc">Aider les autres et partager les connaissances.</div>
+    <div class="consequence">Résumer la leçon du jour, à l’oral ou à l’écrit, pour aider à la compréhension et au partage des connaissances dans la classe.</div>
+  </div>
+
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">📚 LA DISCIPLINE</div>
+    <div class="rule-desc">Faire ses devoirs et rattraper les manqués.</div>
+    <div class="consequence">Rattraper les devoirs manqués ou réaliser des exercices supplémentaires afin de maintenir son apprentissage à jour.</div>
+  </div>
+
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">🙏 LE RESPECT</div>
+    <div class="rule-desc">S’excuser en cas de distraction ou comportement perturbateur.</div>
+    <div class="consequence">Présenter ses excuses à la classe en cas de distraction ou de comportement perturbateur.</div>
+  </div>
+
+  <div class="card" onclick="toggleConsequence(this)">
+    <div class="rule-title">🗣 LA PARTICIPATION</div>
+    <div class="rule-desc">Participer activement aux activités de la classe.</div>
+    <div class="consequence">Perte d’un point de participation en cas de non‑participation, possibilité de le regagner en participant activement.</div>
+  </div>
+
+ 
+  
+</div>
+
+<div class="by-dev"> by dev 101 </div>
+
+<script>
+function toggleConsequence(card) {
+  const consequence = card.querySelector('.consequence');
+  consequence.style.display = (consequence.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
